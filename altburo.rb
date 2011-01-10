@@ -2,7 +2,7 @@ require 'rubygems'
 require 'sinatra'
 require 'curb'
 
-host = '2bu.ro'
+host = '75.101.145.87'
 port = 80
 #host = 'local.secondbureau.com'
 #port = 3000
