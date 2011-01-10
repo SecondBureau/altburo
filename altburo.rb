@@ -2,7 +2,10 @@ require 'rubygems'
 require 'sinatra'
 require 'curb'
 
+# EU Target
 host = '75.101.145.87'
+# AP Target
+#host = '75.101.163.44' 
 port = 80
 #host = 'local.secondbureau.com'
 #port = 3000
