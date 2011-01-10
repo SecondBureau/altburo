@@ -8,6 +8,10 @@ port = 80
 #port = 3000
 agent = 'SecondBureau Redirector'  # must match use_agent_constraint in 2bu.ro
 
+get '/test_sinatra' do |c|
+  "Sinatra is singing"
+end
+
 get %r{/([A-Za-z0-9_]{6,32}$)} do |c|
   url = "http://#{host}:#{port}/indirect/#{c}"
   curl_handler = Curl::Easy.new(url)

@@ -1,2 +1,10 @@
-require 'app.rb'
+require 'rubygems'
+require 'sinatra'
+
+set :environment, :production
+set :port, 8000
+disable :run, :reload
+
+require 'altburo'
+
 run Sinatra::Application
