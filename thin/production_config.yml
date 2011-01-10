@@ -1,12 +1,12 @@
 environment: production
-chdir: /home/www/altburo/current/
+chdir: /home/www/altburo/
 address: 127.0.0.1
 user: www-data
 group: www-data
 port: 8000
-pid: /home/www/altburo/current/tmp/thin.pid
-rackup: /home/www/altburo/current/config.ru
-log: /home/www/altburo/current/log/thin.log
+pid: /home/www/altburo/tmp/thin.pid
+rackup: /home/www/altburo/config.ru
+log: /home/www/altburo/log/thin.log
 max_conns: 1024
 timeout: 30
 max_persistent_conns: 512
