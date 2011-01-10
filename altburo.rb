@@ -5,6 +5,7 @@ require 'host'
 port = 80
 #host = 'local.secondbureau.com'
 #port = 3000
+host = 'shortener.2bu.ro'
 agent = 'SecondBureau Redirector'  # must match use_agent_constraint in 2bu.ro
 
 get '/test_sinatra' do |c|
