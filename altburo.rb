@@ -11,7 +11,7 @@ get '/test_sinatra' do |c|
   "Sinatra is singing"
 end
 
-get %r{/redirections(.*))} do |c|
+get %r{/redirections(.*)} do |c|
   redirect  "http://#{host}/redirections#{c}"
 end
 
