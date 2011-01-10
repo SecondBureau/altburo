@@ -12,6 +12,11 @@ get '/test_sinatra' do |c|
   "Sinatra is singing"
 end
 
+get %r{/redirections(.*))} do |c|
+  redirect  "http://#{host}/redirections#{c}"
+end
+
+
 get %r{/([A-Za-z0-9_]{6,32}$)} do |c|
   url = "http://#{host}:#{port}/indirect/#{c}"
   curl_handler = Curl::Easy.new(url)
@@ -28,5 +33,5 @@ end
 
 get '/^[\.ico]' do |c|
    status 301
-   "redirect  http://#{host}/#{c}"
+   redirect  "http://#{host}/#{c}"
 end
