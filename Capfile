@@ -1,7 +1,7 @@
 load 'deploy' if respond_to?(:namespace)
 
 set :application, "altburo"
-set :user, "www-data"
+set :user, "ubuntu"
 set :use_sudo, false
 
 set :scm, :git
@@ -9,7 +9,7 @@ set :repository,  "git://github.com/SecondBureau/altburo.git"
 set :deploy_via, :remote_cache
 set :deploy_to, "/home/www/#{application}"
 
-role :app, "175.41.149.177"
+role :app, "localhost"
 role :web, "175.41.149.177"
 role :db,  "175.41.149.177", :primary => true
 
