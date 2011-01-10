@@ -5,7 +5,7 @@ set :user, "www-data"
 set :use_sudo, false
 
 set :scm, :git
-set :repository,  "git@github.com:SecondBureau/altburo.git"
+set :repository,  "git://github.com/SecondBureau/altburo.git"
 set :deploy_via, :remote_cache
 set :deploy_to, "/home/www/#{application}"
 
