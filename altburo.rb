@@ -49,3 +49,9 @@ get '/^[\.ico]' do |c|
    status 301
    redirect  "http://#{host}/#{c}"
 end
+
+post '/page/create' do
+puts params[:page].inspect
+  status 201
+  "Invalid action"
+end
