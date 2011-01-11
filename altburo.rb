@@ -12,8 +12,18 @@ get '/whoami' do |c|
   "altburo : Sinatra App on #{%x[hostname]}" 
 end
 
-get '/newrelic_2buro' do |c|
-  "newrelic OK"
+get '/newrelic_2buro' do 
+  url = "http://#{host}:#{port}/newrelic_2buro"
+  curl_handler = Curl::Easy.new(url)
+  curl_handler.headers = "User-Agent: #{agent}"
+  curl_handler.http_get
+  case curl_handler.response_code
+  when 200
+    redirect curl_handler.body_str
+  else
+    status 404
+    "Not found"
+  end
 end
 
 get %r{/redirections(.*)} do |c|
