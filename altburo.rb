@@ -12,7 +12,7 @@ get '/test_sinatra' do |c|
   "Sinatra is singing"
 end
 
-get '/newrelic' do |c|
+get '/newrelic_2buro' do |c|
   "newrelic OK"
 end
 
