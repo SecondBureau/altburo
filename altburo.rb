@@ -9,7 +9,7 @@ host = 'shortener.2bu.ro'
 agent = 'SecondBureau Redirector'  # must match use_agent_constraint in 2bu.ro
 
 get '/test_sinatra' do |c|
-  "Sinatra is singing"
+  "Sinatra is singing on #{Rack::Request.new(env).inspect}" 
 end
 
 get '/newrelic_2buro' do |c|
